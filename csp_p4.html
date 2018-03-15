@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+  <!--This is the background of the webpage -->
+  <style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+  body{
+  background-image:url();
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+          margin:0px;
+          padding:0px;
+          font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+#sidebar{
+  background:#151718;
+  width:200px;
+  height:100%;
+  display:block;
+  position:absolute;
+  left:-200px;
+  top:0px;
+  transition:left 0.3s linear;
+  
+}
+
+#sidebar.visible{
+      left:0px;
+      transition:left 0.3s linear;
+}
+
+ul{
+  margin:0px;
+  padding:0px;
+  
+}
+
+ul li{
+  list-style:none;
+  
+}
+
+ul li a{
+  background:#1C1E1F;
+  color:#ccc;
+  border-bottom:1px solid #111;
+  display:block;
+  width:180px;
+  padding:10px;
+  text-decoration:none;
+}
+
+#sidebar-btn{
+  display:inline-block;
+  vertical-align:middle;
+  height:20px;
+  width:20px;
+  cursor:pointer;
+    margin:20px;
+    position:absolute;
+    top:0px;
+    right:-60px;
+  color:red;
+}
+
+#sidebar-btn span{
+  height:1px;
+  background:#555;
+  margin-bottom:5px;
+  display:block;
+  color:red;
+}
+
+#sidebar-btn span:nth-child(2){ 
+  width:75%;
+  
+}
+
+#sidebar-btn span:nth-child(3){ 
+  width:50%;
+  
+}
+
+a:visited { 
+    color: green;
+}
+
+/* unvisited link */
+a:link {
+    color: green;
+}
+
+a:visited { 
+    color: pink;
+}
+</style>  
+
+
+<head>
+    
+    <h2 style="text-align:center">My Summoner</h2>
+
+<div class="card">
+  <img src="/img/rakan1.jpg" style="width:100%">
+  <h1>Rakan</h1>
+  <p class="title">Top #20 Rakan</p>
+  <p>Silver IV 0lp</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+ </div>
+ <p><button>Contact</button></p>
+</div>
+
+    <meta charset="utf-8">
+    <title>Brandon's Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+    <body onload="init()">
+<!--        <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+        <div style="position:absolute;top:12%;left:37%;">Choose Color</div>
+        <div style="position:absolute;top:15%;left:37%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+        <div style="position:absolute;top:15%;left:38%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+        <div style="position:absolute;top:15%;left:39%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:37%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:38%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:39%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+        <div style="position:absolute;top:20%;left:37%;">Eraser</div>
+        <div style="position:absolute;top:22%;left:37%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:57%;left:10%;">
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:57%;left:15%;"> -->
+        
+    <div id="sidebar">
+    <!-- this orders the websites into a list -->
+
+    <ul>
+        <li><a href="index.html"><b>Home</b></a></li>
+  
+        <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+        
+        <li><a href="csp_p4.html"><b>CSP_P4</b></a></li>
+        
+        <li><a href="pie.html"><b>Slideshow</b></a></li>
+        
+        <li><a href="theway.html"><b>The Way</b></a></li>
+        
+        <li><a href="port.html"><b>LoL Portfolio</b></a></li>
+        
+                <li><a href="zoom.html"><b>Zoom</b></a></li>
+                        <li><a href="scroll.html"><b>Ocean Man</b></a></li>
+
+</ul>
+
+ <div id="sidebar-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+</div>
+ <center><h1 style="color:Tomato">Merry Christmas. </h1>
+  <p> <a target="_blank" href="https://www.masterypoints.com/highscores/champion/rakan/1/na">MasteryPoints.com</a> <p>
+ <!-- <img src="images/wood.jpg" style = "width:125px; height:50x";><p>
+  <img src="images/wood.jpg" style = "width:125px; height:50x";><p>
+  <img src="images/wood.jpg" style = "width:125px; height:50x";><p>
+  <img src="images/wood.jpg" style = "width:125px; height:50x";><p>
+    <img src="images/wood.jpg" style = "width:125px; height:50x";><p>
+    <img src="images/wood.jpg" style = "width:125px; height:50x";><p> -->
+  <a target="_blank" href="https://scratch.mit.edu/projects/173452503/#player">My Scratch Story</a> <p>
+  <a href="app/Final_Version_of_Game_JadenandBrandon.py" download>Our Project</a> </p>
+  <a target="_blank" href="https://repl.it/MbUa/28">My Repl.it Story</a> <p>
+  <a href="images/APCSPProject.pdf" download>CSP Project</a> </p
+  </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script>
+
+	$(document).ready(function(){
+		$('#sidebar-btn').click(function(){
+			$('#sidebar').toggleClass('visible');
+		});
+	});
+
+	</script>
+   <!-- <script type="text/javascript">
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('can');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+    
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+    
+    function color(obj) {
+        switch (obj.id) {
+            case "green":
+                x = "green";
+                break;
+            case "blue":
+                x = "blue";
+                break;
+            case "red":
+                x = "red";
+                break;
+            case "yellow":
+                x = "yellow";
+                break;
+            case "orange":
+                x = "orange";
+                break;
+            case "black":
+                x = "black";
+                break;
+            case "white":
+                x = "white";
+                break;
+        }
+        if (x == "white") y = 14;
+        else y = 2;
+    
+    }
+    
+    function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+    }
+    
+    function erase() {
+        var m = confirm("Want to clear");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+    }
+    
+    function save() {
+        document.getElementById("canvasimg").style.border = "2px solid";
+        var dataURL = canvas.toDataURL();
+        document.getElementById("canvasimg").src = dataURL;
+        document.getElementById("canvasimg").style.display = "inline";
+    }
+    
+    function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                draw();
+            }
+        }
+    }
+    </script> -->
+    
+    
+
+
+    
+ 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+       <!--This is for the text/gifs -->
+
+ 
+
+</html>
