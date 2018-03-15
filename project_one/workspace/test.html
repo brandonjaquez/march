@@ -1,0 +1,130 @@
+<!doctype html>
+    <html lang="en">
+
+         
+         <style>
+
+  body{
+          margin:0px;
+          padding:0px;
+          font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+#sidebar{
+  background:#151718;
+  width:200px;
+  height:100%;
+  display:block;
+  position:absolute;
+  left:-200px;
+  top:0px;
+  transition:left 0.3s linear;
+  
+}
+
+#sidebar.visible{
+      left:0px;
+      transition:left 0.3s linear;
+}
+
+ul{
+  margin:0px;
+  padding:0px;
+  
+}
+
+ul li{
+  list-style:none;
+  
+}
+
+ul li a{
+  background:#1C1E1F;
+  color:#ccc;
+  border-bottom:1px solid #111;
+  display:block;
+  width:180px;
+  padding:10px;
+  text-decoration:none;
+}
+
+#sidebar-btn{
+  display:inline-block;
+  vertical-align:middle;
+  height:20px;
+  width:20px;
+  cursor:pointer;
+    margin:20px;
+    position:absolute;
+    top:0px;
+    right:-60px;
+}
+
+#sidebar-btn span{
+  height:1px;
+  background:#111;
+  margin-bottom:5px;
+  display:block;
+}
+
+#sidebar-btn span:nth-child(2){ 
+  width:75%;
+  
+}
+
+#sidebar-btn span:nth-child(3){ 
+  width:50%;
+  
+}
+
+</style>
+
+
+<head>
+    <meta charset="utf-8">
+     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+    <div id="sidebar">
+    <!-- this orders the websites into a list -->
+    
+    <ul>
+        <li><a href="index.html"><b>Home</b></a></li>
+  
+        <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+  
+        <li><a href="csp_p4.html"><b>CSP_P4</b><a/></li>
+    
+</ul>
+
+ <div id="sidebar-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		$('#sidebar-btn').click(function(){
+			$('#sidebar').toggleClass('visible');
+		});
+	});
+
+	</script>
+
+       <!--This is for the text/gifs -->
+       
+   <center> <h1>This is my test Home Page!</h1> <p>
+    <img src="images/home.jpg" height="250"> <p> </center>
+
+
+  </body>
+
+</html>
+

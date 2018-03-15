@@ -1,0 +1,256 @@
+<!doctype html>
+    <html lang="en">
+
+         
+         <style>
+
+  body{
+
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+          margin:0px;
+          padding:0px;
+          font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+#sidebar{
+  background:#151718;
+  width:200px;
+  height:100%;
+  display:block;
+  position:absolute;
+  left:-200px;
+  top:0px;
+  transition:left 0.3s linear;
+  
+}
+
+#sidebar.visible{
+      left:0px;
+      transition:left 0.3s linear;
+}
+
+ul{
+  margin:0px;
+  padding:0px;
+  
+}
+
+ul li{
+  list-style:none;
+  
+}
+
+ul li a{
+  background:#1C1E1F;
+  color:#ccc;
+  border-bottom:1px solid #111;
+  display:block;
+  width:180px;
+  padding:10px;
+  text-decoration:none;
+}
+
+#sidebar-btn{
+  display:inline-block;
+  vertical-align:middle;
+  height:20px;
+  width:20px;
+  cursor:pointer;
+    margin:20px;
+    position:absolute;
+    top:0px;
+    right:-60px;
+  color:red;
+}
+
+#sidebar-btn span{
+  height:1px;
+  background:#555;
+  margin-bottom:5px;
+  display:block;
+  color:red;
+}
+
+#sidebar-btn span:nth-child(2){ 
+  width:75%;
+  
+}
+
+#sidebar-btn span:nth-child(3){ 
+  width:50%;
+  
+}
+
+a:visited { 
+    color: green;
+}
+
+/* unvisited link */
+a:link {
+    color: green;
+}
+
+a:visited { 
+    color: pink;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+</style>  
+
+
+<head>
+    <meta charset="utf-8">
+     <title>Brandon's Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+    <div id="sidebar">
+    <!-- this orders the websites into a list -->
+    
+    <ul>
+        <li><a href="index.html"><b>Home</b></a></li>
+  
+        <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+        
+        <li><a href="csp_p4.html"><b>CSP_P4</b></a></li>
+        
+        <li><a href="pie.html"><b>Slideshow</b></a></li>
+        
+        <li><a href="theway.html"><b>The Way</b></a></li>
+        
+        <li><a href="port.html"><b>LoL Portfolio</b></a></li>
+        
+
+</ul>
+
+ <div id="sidebar-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		$('#sidebar-btn').click(function(){
+			$('#sidebar').toggleClass('visible');
+		});
+	});
+
+	</script>
+
+       <!--This is for the text/gifs -->
+       
+   <center> <h1 style="color:Tomato">Ocean Man </h1> <p>
+
+<div style="color: black; height:200px;width:400px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<h4>Ocean man, take me by the hand, lead me to the land that you understand 
+Ocean man, the voyage to the corner of the globe is a real trip 
+Ocean man, the crust of a tan man imbibed by the sand 
+Soaking up the thirst of the land
+Ocean man, can you see through the wonder of amazement at the oberman 
+Ocean man, the crust is elusive when it casts forth to the childlike man 
+Ocean man, the sequence of a life form braised in the sand
+Soaking up the thirst of the land
+Ocean man, ocean man 
+Ocean man
+Ocean man, take me by the hand, lead me to the land that you understand 
+Ocean man, the voyage to the corner of the globe is a real trip 
+Ocean man, the crust of a tan man imbibed by the sand 
+Soaking up the thirst of the land
+Ocean man, can you see through the wonder of amazement at the oberman 
+Ocean man, the crust is elusive when it casts forth to the childlike man 
+Ocean man, the sequence of a life form braised in the sand
+Soaking up the thirst of the land
+Ocean man
+</h4>
+</div>
+
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<h1>JavaScript Progress Bar</h1>
+<ul>
+          <li><a href="index.html"><b>Home</b></a></li>
+  
+        <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+        
+        <li><a href="csp_p4.html"><b>CSP_P4</b></a></li>
+        
+        <li><a href="pie.html"><b>Slideshow</b></a></li>
+        
+        <li><a href="theway.html"><b>The Way</b></a></li>
+        
+        <li><a href="port.html"><b>LoL Portfolio</b></a></li>
+        
+                <li><a href="zoom.html"><b>Zoom</b></a></li>
+                        <li><a href="scroll.html"><b>Ocean Man</b></a></li>
+</ul>  
+<div id="myProgress">
+  <div id="myBar">0%</div>
+</div>
+
+<br>
+<button onclick="move()">Click Me</button> 
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+<div id="txt"></div>
+
+  </body>
+
+</html>
